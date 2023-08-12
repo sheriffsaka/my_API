@@ -71,8 +71,10 @@ group :test do
   gem "webdrivers"
 end
 
+gem 'faker'
 gem 'devise'
 gem 'devise-i18n'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
+gem 'kaminari', '~> 1.2', '>= 1.2.2'

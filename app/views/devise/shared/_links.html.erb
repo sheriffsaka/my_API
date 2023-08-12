@@ -22,8 +22,10 @@
   <%- resource_class.omniauth_providers.each do |provider| %>
     <%= form_for "Login", url: omniauth_authorize_path(resource_name, provider), method: :post, 
       data: {turbo: "false"} do |f| %>
-        <%# <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: { turbo: false } %> <br />  %>
+        <%# <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: { turbo: false } %> <br />
         <%= f.submit "Login", type: "image", src: url_for("/assets/btn_google_signin_light_normal_web.png") %>
     <% end %>
   <% end %>
 <% end %>
+
+<%= link_to "Show Animals", api_v1_animals_path %><br>
