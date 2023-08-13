@@ -180,6 +180,7 @@ GEM
       actionpack (>= 4.2)
       omniauth (~> 2.0)
     orm_adapter (0.5.0)
+    pg (1.5.3-x64-mingw-ucrt)
     public_suffix (5.0.3)
     puma (5.6.6)
       nio4r (~> 2.0)
@@ -241,7 +242,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.3-x64-mingw-ucrt)
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
     thor (1.2.2)
@@ -290,11 +290,11 @@ DEPENDENCIES
   omniauth
   omniauth-google-oauth2
   omniauth-rails_csrf_protection (~> 1.0)
+  pg
   puma (~> 5.0)
   rails (~> 7.0.6)
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
   tzinfo-data

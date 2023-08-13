@@ -6,6 +6,12 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+  # Redis cache added to the system.
+  config.cache_store = :redis_cache_store, {
+    url: ENV.fetch('REDIS_URL'){ 'redis://localhost:6379/1'},
+    size: 64.megabytes
+  }
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
@@ -90,4 +96,11 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Google credentials
+  ENV['GOOGLE_CLIENT_ID'] = '80998246043-22f5nclsp02vc3s3mfr8k068rctm1kmp.apps.googleusercontent.com'
+  ENV['GOOGLE_CLIENT_SECRET'] = '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'
+ 
+  # Host addedto the system
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
