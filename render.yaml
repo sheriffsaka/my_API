@@ -19,7 +19,7 @@ services:
         sync: false
     # type: redis
     # name: redis
-    ipAllowList: []
+    #ipAllowList: []
     plan: free
-    maxmemoryPolicy: noeviction
+    #maxmemoryPolicy: noeviction
 
