@@ -28,4 +28,8 @@ test:
 production:
   <<: *default
   # database: db/development.sqlite3
+  url: <%= ENV["DATABASE_URL"] %>
   database: myanimals
+  username: postgres
+  password: Adetunji12#
+  
