@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-# Animal.validates :aname, uniqueness: true, on: :create
+Animal.validates :aname, uniqueness: true, on: :create
 1500.times do
     Animal.create({
         aname: Faker::Creature:: Animal.name
     })
 end
 
-# Animal.clear_validators!
+Animal.clear_validators!
