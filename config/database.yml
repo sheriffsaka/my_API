@@ -28,8 +28,7 @@ test:
 production:
   <<: *default
   # database: db/development.sqlite3
-  url: <%= ENV["DATABASE_URL"] %>
+  url: postgres://myanimals_user:tt28jvWj8WRrZb9lLPSAfqCq01kOpP2L@dpg-cje0q3mnk9qs73esfmo0-a/myanimals
   database: myanimals
   username: postgres
-  password: Adetunji12#
-  
+  password: tt28jvWj8WRrZb9lLPSAfqCq01kOpP2L
