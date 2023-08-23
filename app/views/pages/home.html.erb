@@ -3,7 +3,7 @@
     <h1>My Animals API Project</h1>
 <% if current_user %>
     <h2><%= current_user.email %></h2>
-    <%= image_tag(current_user.avatar_url) %><br>
+    <%# <%= image_tag(current_user.avatar_url) %><br>
     <%= link_to "Show Animals", api_v1_animals_path %><br>
     <%= link_to "Edit Account", edit_user_registration_path %><br>
     <p><%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete %></p>

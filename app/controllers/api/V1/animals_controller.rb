@@ -17,6 +17,7 @@ module Api
              def create
                  # animal = Animal.new(animal_params)
                  animal = Animal.new(animal_params)
+                 authorize! :create, animal
  
                  if animal.save
                      render json: {status: 'SUCCESS', message: 'Animal Saved Successfully', data: animal}, status: :ok
@@ -27,12 +28,14 @@ module Api
  
              def destroy
                  animal = Animal.find(params[:id])
+                 authorize! :destroy, animal
                  animal.destroy
                  render json: {status: 'SUCCESS', message: 'Animal successfully deleted', data: animal}, status: :ok
              end
  
              def update
                  animal = Animal.find(params[:id])
+                 authorize! :update, animal
                  if animal.update(animal_params)
                      render json: {status: 'SUCCESS', message: 'Animal Updated Successfully', data: animal}, status: :ok
                  else
